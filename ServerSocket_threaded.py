@@ -29,11 +29,11 @@ def receive(con,add):
         #Retrieve everything
         while len(data)<payloadsize:
             try:
-		prev_data = data;
+                prev_data = data;
                 data += con.recv(2**20);
-		if (prev_data == data):
-			condi = False;
-			break;
+                if (prev_data == data):
+                    condi = False;
+                    break;
             except:
                 condi = False;
                 break;
@@ -50,11 +50,11 @@ def receive(con,add):
         #make sure all data are received
         while len(data) < msg_size:
             try:
-		prev_data = data;
+                prev_data = data;
                 data += con.recv(2**20);
-		if (prev_data == data):
-			condi = False;
-			break;
+                if (prev_data == data):
+                    condi = False;
+                    break;
             except:
                 condi = False;
                 break;
